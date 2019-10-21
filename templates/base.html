@@ -1,0 +1,73 @@
+{% load static %}
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}{% endblock%}</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 可选的Bootstrap主题文件（一般不使用） -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body  style="background:url({% static "images/image_background.jpg" %}) ;background-size:100% 100%; background-attachment: fixed;">
+    <div class="container" >
+        {% include 'header1.html' %}
+        <div class="list-group" style="width: 300px;margin-top: 198px;margin-left: 100px">
+            <div class="panel-heading" style="width: 310px">
+                {% block headmessage %} {% endblock %}
+            </div>
+        <div class="panel-body" style="margin-top: -30px">
+            {% block content %} {% endblock %}
+        </div>
+        </div>
+
+    <div class="list-group" style="margin-left: 430px;margin-right: 870px;margin-top: -376px;width: 300px">
+            <div class="panel-heading" style="width: 300px">
+                {% block headmessage1 %} {% endblock %}
+            </div>
+        <div class="panel-body" style="margin-top: -30px">
+            {% block content1 %} {% endblock %}
+        </div>
+        </div>
+
+    <div class="list-group" style="margin-left: 760px;margin-right: 410px;margin-top: -378px;width: 300px">
+            <div class="panel-heading" style="width: 300px">
+                {% block headmessage2 %} {% endblock %}
+            </div>
+        <div class="panel-body" style="margin-top: -30px">
+            {% block content2 %} {% endblock %}
+        </div>
+        </div>
+
+    <div class="list-group" style="margin-left: 170px;margin-right: 1009px;margin-top: -20px;width: 300px">
+            <div class="panel-heading" style="width: 400px">
+                {% block headmessage3 %} {% endblock %}
+            </div>
+        <div class="panel-body" style="margin-top: -30px">
+            {% block content3 %} {% endblock %}
+        </div>
+        </div>
+    <div class="list-group" style="margin-left: 580px;margin-right: 589px;margin-top: -374px;width: 300px">
+            <div class="panel-heading" style="width: 400px">
+                {% block headmessage4 %} {% endblock %}
+            </div>
+        <div class="panel-body" style="margin-top: -30px">
+            {% block content4 %} {% endblock %}
+        </div>
+        </div>
+    </div>
+
+        <div  class="panel-footer" style="background: grey;height:100px;width:100%;min-width:1150px;margin-top: 20px">
+            {% include 'footer.html' %}
+        </div>
+
+</body>
+</html>
